@@ -5,6 +5,8 @@ The project focuses on a modern, clean and user-friendly design.
 
 Live: https://engstrom.design
 
+![Preview](./preview.png)
+
 ## Purpose
 
 The goal of this project is to have a single place to present my projects and web development skills.
