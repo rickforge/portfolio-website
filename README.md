@@ -37,3 +37,9 @@ The goal of this project is to have a single place to present my projects and we
 
 - Add more impressive projects.
 - Continuous improvement of accessibility and UX.
+
+## What I learned
+
+- Structuring a React project from scratch
+- Working with deployment (GitHub Pages + custom domain)
+- Improving my responsive layout skills
