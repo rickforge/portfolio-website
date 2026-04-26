@@ -43,3 +43,7 @@ The goal of this project is to have a single place to present my projects and we
 - Structuring a React project from scratch
 - Working with deployment (GitHub Pages + custom domain)
 - Improving my responsive layout skills
+
+## License
+
+This project is licensed under the MIT License.
