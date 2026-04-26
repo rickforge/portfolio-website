@@ -9,6 +9,10 @@ function Footer() {
           © {new Date().getFullYear()} Rickard Engström
         </span>
       </p>
+      <p className="footer-source">
+        View source on {" "}
+        <a href="https://github.com/rickforge/portfolio-website">GitHub</a>
+      </p>
     </footer>
   );
 }

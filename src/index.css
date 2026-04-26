@@ -604,8 +604,28 @@ h6 {
 .footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap-reverse;
+}
+
+
+.footer-source {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.footer-source a {
+  color: var(--color-text-secondary);
+  transition: 0.3s ease;
+}
+
+.footer-source a:hover {
+  color: var(--color-text-primary);
 }
 
 .copyright {
@@ -731,6 +751,12 @@ h6 {
   .skills {
     grid-template-columns: repeat(2, max-content);
     justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 446px) {
+  .footer {
+    justify-content: center;
   }
 }
 
