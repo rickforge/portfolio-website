@@ -58,10 +58,7 @@ function Header() {
   }, []);
 
   return (
-    <header
-      className="header"
-      ref={menuRef}
-    >
+    <header className="header" ref={menuRef}>
       <h2>
         <a href="/" className="logo">
           engstrom.design
