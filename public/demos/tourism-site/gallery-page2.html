@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <title>Gallery</title>
+
+    <!-- Bulma css import-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+
+    <!-- Font Awesome Ikoner-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Egen css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header med branding & navigation-->
+    <header>
+      <!-- Logo / Titel-->
+      <nav class="navbar is-fixed-top p-4">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html"
+            ><img src="images/logo.svg" alt="site logo" />
+            <span class="title is-size-5-mobile">Visit Norrbotten</span>
+          </a>
+
+          <!-- Meny knapp för surfplatta och mobilvy -->
+          <a
+            class="navbar-burger"
+            role="button"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!-- Huvudmeny -->
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Destinations</a>
+
+              <div class="navbar-dropdown">
+                <a href="kalix.html" class="navbar-item">Kalix</a
+                ><a href="lulea.html" class="navbar-item">Luleå</a>
+              </div>
+            </div>
+            <a href="gallery.html" class="navbar-item is-active has-text-white"
+              >Gallery</a
+            ><a href="contact.html" class="navbar-item">Contact</a>
+            <button
+              class="navbar-item button is-dark ml-4 has-text-white"
+              id="theme-toggle"
+            ></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Info sektion + breadcrumbs-->
+      <section class="section">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li class="is-active"><a>Page 2</a></li>
+            </ul>
+          </nav>
+          <h1 class="title has-text-centered">Gallery</h1>
+
+          <!-- Galleri -->
+          <div class="columns is-multiline">
+            <!-- Bild 1 -->
+            <div class="column is-4">
+              <figure
+                class="image is-square is-clickable js-modal-trigger"
+                data-target="modal-img1"
+              >
+                <img
+                  src="images/kiruna-church-480x480.webp"
+                  alt="Kiruna church with a lot of snow"
+                />
+              </figure>
+            </div>
+
+            <!-- Bild 2 -->
+            <div class="column is-4">
+              <figure
+                class="image is-square is-clickable js-modal-trigger"
+                data-target="modal-img2"
+              >
+                <img
+                  src="images/northern-lights-480x480.webp"
+                  alt="Northern lights with a forest foreground"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav
+            class="pagination is-centered is-rounded"
+            aria-label="pagination"
+          >
+            <ul class="pagination-list">
+              <li>
+                <a href="gallery.html" class="pagination-link">1</a>
+              </li>
+              <li>
+                <a class="pagination-link is-current">2</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="columns p-5 is-8">
+        <!-- Socials -->
+        <div class="column">
+          <div class="container">
+            <h2 class="title is-5">Socials</h2>
+            <ul>
+              <!-- Facebook -->
+              <li class="pb-2">
+                <a href="https://facebook.com">
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                    <span>Facebook</span>
+                  </span>
+                </a>
+              </li>
+              <!-- Instagram -->
+              <li class="pb-2">
+                <a href="https://instagram.com">
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fab fa-instagram"></i>
+                    </span>
+                    <span>Instagram</span>
+                  </span>
+                </a>
+              </li>
+              <!-- Pinterest -->
+              <li>
+                <a href="https://pinterest.com">
+                  <span class="icon-text">
+                    <span class="icon">
+                      <i class="fab fa-pinterest"></i>
+                    </span>
+                    <span>Pinterest</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Nyhetsbrev -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-5 pb-5">Newsletter</h2>
+            <p class="subtitle" lang="zxx">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+              neque aut corrupti quos accusantium totam tempora nemo debitis
+              soluta blanditiis?
+            </p>
+            <div class="has-text-centered">
+              <button
+                class="button is-warning is-fullwidth js-modal-trigger"
+                data-target="modal-js-newsletter"
+              >
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Credits -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-5">Credits</h2>
+            <ul>
+              <li class="pb-2">
+                "<a
+                  href="https://sv.wikipedia.org/wiki/Norrbottens_landskapsvapen#/media/Fil:Norrbottens_vapen.svg"
+                  >Norrbottens vapen (Icon)</a
+                >" by
+                <a href="https://commons.wikimedia.org/wiki/User:Leonid_2"
+                  >Leonid 2</a
+                >, licensed under
+                <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+                  >CC BY-SA 3.0</a
+                >
+              </li>
+              <li class="pb-2">
+                "<a
+                  href="https://en.wikipedia.org/wiki/Kalix_Municipality#/media/File:Kalix_kommunhus.jpg"
+                  >Kalix municipal building</a
+                >" by
+                <a href="https://commons.wikimedia.org/wiki/User:FritzDaCat"
+                  >FritzDaCat</a
+                >, licensed under
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+                  >CC BY-SA 4.0</a
+                >, modified
+              </li>
+              <li>
+                "<a
+                  href="https://en.wikipedia.org/wiki/Lule%C3%A5#/media/File:Lulea-city-festival-water.jpg"
+                  >Luleå, 2014</a
+                >" by Andreas Harnemo, licensed under
+                <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+                  >CC BY-SA 3.0</a
+                >, modified
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Galleri modals -->
+
+    <!-- Bild 1 -->
+    <div id="modal-img1" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image">
+          <img
+            src="images/kiruna-church-1000x1000.webp"
+            alt="Kiruna church with a lot of snow"
+            loading="lazy"
+          />
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Bild 2 -->
+    <div id="modal-img2" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image">
+          <img
+            src="images/northern-lights-1000x1000.webp"
+            alt="Northern lights with a forest foreground"
+            loading="lazy"
+          />
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Modal för nyhetsbrev -->
+    <div id="modal-js-newsletter" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <!-- Modal header-->
+        <div class="modal-card-head is-shadowless">
+          <h2 class="title is-4">Sign up to the newsletter</h2>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-card-body">
+          <p class="pb-4" lang="zxx">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, fugit.
+          </p>
+          <!-- Formulär -->
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input
+                type="email"
+                class="input"
+                placeholder="example@gmail.com"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-card-foot">
+          <div class="buttons">
+            <button class="button is-success">Submit</button>
+            <button class="button is-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="main.js" defer></script>
+  </body>
+</html>

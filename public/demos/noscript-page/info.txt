@@ -1,0 +1,9 @@
+Dynamiskt uppdatera dessa ställen: 
+
+1. meta info om preview-posts
+2. Titel + text preview i preview-posts
+3. CSS för pagination
+4. rss.xml 
+5. aria-labels (knapparna) i preview-posts 
+6. aria-current="page" för varje sida
+7. Lägg till lang="sv" på svenska posts
