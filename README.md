@@ -11,8 +11,6 @@ Live: https://engstrom.design
 
 The goal of this project is to have a single place to present my projects and web development skills.
 
-## About
-
 ## Tech
 
 - React
