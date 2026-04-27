@@ -2,34 +2,30 @@ import { useRef, useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 function Header() {
-  // Controls whether the mobile menu is open or closed
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Reference to the header element to detect clicks outside
+  // Used to detect clicks outside the header/mobile menu
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  // Toggles menu state when hamburger button is clicked
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
 
-  //Close menu when pressing Escape key
+  // Close mobile menu with Escape
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape" && menuOpen) {
         setMenuOpen(false);
       }
     }
-
     document.addEventListener("keydown", handleKeyDown);
 
-    // Cleanup
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [menuOpen]);
 
-  // Close menu when clicking outside of the header
+  // Close mobile menu when clicking outside the header/menu
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -39,12 +35,12 @@ function Header() {
 
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
+  // Reset menu state when switching back to desktop layout
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 768) {
@@ -81,11 +77,11 @@ function Header() {
         className={`site-navigation ${menuOpen ? "open" : ""}`}
         id="main-menu"
       >
-        <a href="#projects" onClick={() => setMenuOpen(false)}>
-          Projects
-        </a>
         <a href="#about" onClick={() => setMenuOpen(false)}>
           About
+        </a>
+        <a href="#projects" onClick={() => setMenuOpen(false)}>
+          Projects
         </a>
         <a
           href="#contact"

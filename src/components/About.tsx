@@ -10,23 +10,20 @@ function About() {
         </div>
 
         <div className="about-content">
-            <h3>Design-minded frontend developer</h3>
+          <h3>Design-minded Frontend Developer</h3>
           <p>
-            I'm a frontend developer and designer currently studying the
-            Webmaster program at Högskolan Väst. I'm focused on building modern,
-            responsive websites with a clean and user-friendly design.
+            I'm a frontend developer focused on building modern, responsive
+            websites with clean interfaces and thoughtful user experiences.
           </p>
           <p>
-            I enjoy working at the intersection of design and development,
-            turning ideas into simple and intuitive interfaces. I'm currently
-            expanding my skills in React and JavaScript while continuing to
-            build and improve my projects.
+            I enjoy working with both the visual side of design and the
+            technical side of development, turning ideas into interfaces that
+            are clear, intuitive and well-structured.
           </p>
           <p>
-            Outside of web development, I spend a lot of time on creative
-            projects like playing guitar and producing music, as well as gaming
-            and experimenting with Linux. I also run my own home server, which
-            has made me more interested in how things work behind the scenes.
+            Beyond frontend, I'm interested in Linux self-hosting and creative
+            projects like music production, and enjoy learning how things work
+            behind the scenes.
           </p>
         </div>
       </div>

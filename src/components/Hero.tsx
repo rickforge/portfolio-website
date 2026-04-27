@@ -4,21 +4,25 @@ import { ArrowDown, ArrowDownToLine } from "lucide-react";
 function Hero() {
   const [animate, setAnimate] = useState(false);
 
+  // Triggers title text animation once on page load
   useEffect(() => {
     setAnimate(true);
   }, []);
 
-  // Dotgrid functionality
+  // Dotgrid
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState(false);
 
+  //Calculates mouse position relative to the section - Used for CSS radial hover effect
   function handleMouseMove(event: React.MouseEvent<HTMLElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
 
     const x = ((event.clientX - rect.left) / rect.width) * 100;
     const y = ((event.clientY - rect.top) / rect.height) * 100;
 
-    setMousePosition({ x, y });
+    requestAnimationFrame(() => {
+      setMousePosition({ x, y });
+    });
   }
 
   function handleMouseEnter() {
@@ -62,7 +66,7 @@ function Hero() {
             View Projects <ArrowDown />
           </a>
           <a
-            href=""
+            href="/cv.pdf"
             className="hero-button hero-button-secondary"
             target="_blank"
             rel="noopener noreferrer"

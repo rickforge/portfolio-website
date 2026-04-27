@@ -111,12 +111,9 @@ h6 {
   position: absolute;
   left: 0;
   bottom: -2px;
-
   width: 100%;
   height: 1px;
-
   background: var(--color-text-primary);
-
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.3s ease;
@@ -164,7 +161,6 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 /* Container holding all text content */
@@ -398,8 +394,8 @@ h6 {
 .about-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
 }
 .about-image {
   border-radius: 16px;
@@ -657,11 +653,9 @@ h6 {
 
   background-size: 250% 100%;
   background-position: 120% 50%;
-
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
   opacity: 0;
 }
 
@@ -718,10 +712,8 @@ h6 {
     border-bottom-right-radius: 16px;
     background: var(--color-surface);
     z-index: 101;
-
     opacity: 0;
     pointer-events: none;
-
     transition: 0.3s ease;
   }
 
@@ -755,6 +747,10 @@ h6 {
 
 @media (max-width: 446px) {
   .footer {
+    justify-content: center;
+  }
+
+  .about-container {
     justify-content: center;
   }
 }
