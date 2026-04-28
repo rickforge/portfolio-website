@@ -15,14 +15,14 @@ function Skills() {
   return (
     <section className="skills-container">
       <h2>Tech Stack</h2>
-      <div className="skills">
+      <ul className="skills">
         {skills.map((skill) => (
-          <div key={skill.name} className="skill">
-            <Icon icon={skill.icon} />
-            <p>{skill.name}</p>
-          </div>
+          <li key={skill.name} className="skill">
+            <Icon icon={skill.icon} aria-hidden="true" />
+            <span>{skill.name}</span>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

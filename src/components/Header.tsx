@@ -55,11 +55,9 @@ function Header() {
 
   return (
     <header className="header" ref={menuRef}>
-      <h2>
-        <a href="/" className="logo">
-          engstrom.design
-        </a>
-      </h2>
+      <a href="/" className="logo" aria-label="engstrom.design home">
+        engstrom.design
+      </a>
 
       <button
         className="touch-menu"
@@ -69,13 +67,17 @@ function Header() {
         aria-controls="main-menu"
       >
         <span className={`menu-icon ${menuOpen ? "open" : ""}`}>
-          {menuOpen ? <X size={32} /> : <Menu size={32} />}
+          {menuOpen ? (
+            <X size={32} aria-hidden="true" />
+          ) : (
+            <Menu size={32} aria-hidden="true" />
+          )}
         </span>
       </button>
 
       <nav
         className={`site-navigation ${menuOpen ? "open" : ""}`}
-        id="main-menu"
+        id="main-menu" aria-label="Main navigation"
       >
         <a href="#about" onClick={() => setMenuOpen(false)}>
           About

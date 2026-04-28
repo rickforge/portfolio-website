@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" aria-label="Site footer">
       <p className="copyright">
         <span className="copyright-base">
           © {new Date().getFullYear()} Rickard Engström
@@ -10,8 +10,13 @@ function Footer() {
         </span>
       </p>
       <p className="footer-source">
-        View source on {" "}
-        <a href="https://github.com/rickforge/portfolio-website">GitHub</a>
+        View source on{"  "}
+        <a
+          href="https://github.com/rickforge/portfolio-website"
+          aria-label="View source code for this portfolio on GitHub"
+        >
+          GitHub
+        </a>
       </p>
     </footer>
   );

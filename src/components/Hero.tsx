@@ -63,15 +63,14 @@ function Hero() {
         </p>
         <div className="hero-buttons-container">
           <a href="#projects" className="hero-button">
-            View Projects <ArrowDown />
+            View Projects <ArrowDown aria-hidden="true" />
           </a>
           <a
             href="/cv.pdf"
             className="hero-button hero-button-secondary"
-            target="_blank"
-            rel="noopener noreferrer"
+            aria-label="Open CV"
           >
-            Download CV <ArrowDownToLine />
+            View CV <ArrowDownToLine aria-hidden="true" />
           </a>
         </div>
       </div>

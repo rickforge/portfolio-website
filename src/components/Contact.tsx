@@ -15,27 +15,21 @@ function Contact() {
           href="mailto:rickard.engstrom97@gmail.com"
           className="contact-link"
           title="rickard.engstrom97@gmail.com"
-          aria-label="rickard.engstrom97@gmail.com"
+          aria-label="Email Rickard at rickard.engstrom97@gmail.com"
         >
-          <Icon icon="mdi:email-outline" />
+          <Icon icon="mdi:email-outline" aria-hidden="true" />
           <span>Email</span>
         </a>
-        <a
-          href="https://github.com/rickforge"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <Icon icon="mdi:github" />
+        <a href="https://github.com/rickforge" className="contact-link" aria-label="Rickard's GitHub profile">
+          <Icon icon="mdi:github" aria-hidden="true" />
           <span>GitHub</span>
         </a>
         <a
           href="https://linkedin.com/in/rickard-engström-68b960272"
-          target="_blank"
-          rel="noopener noreferrer"
           className="contact-link"
+          aria-label="Rickard's LinkedIn profile"
         >
-          <Icon icon="mdi:linkedin" />
+          <Icon icon="mdi:linkedin" aria-hidden="true" />
           <span>LinkedIn</span>
         </a>
       </div>

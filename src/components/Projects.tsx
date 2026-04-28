@@ -71,32 +71,32 @@ function Projects() {
               />
             </div>
             <p className="project-desc">{project.description}</p>
-            <div className="project-tech">
+            <div className="project-tech" aria-label="Technologies used">
               {project.tech.map((tech) => (
                 <div
                   key={tech.name}
                   className="project-tech-item"
                   title={tech.name}
+                  aria-label={tech.name}
                 >
-                  <Icon icon={tech.icon} />
+                  <Icon icon={tech.icon} aria-hidden="true" />
                 </div>
               ))}
             </div>
             <div className="project-links">
-              <a className="project-link-primary"
+              <a
+                className="project-link-primary"
                 href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                aria-label={`Open live demo for ${project.title}`}
               >
-                Live demo ↗
+                Live demo
               </a>
               <a
                 href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="project-link-secondary project-link-primary"
+                aria-label={`View ${project.title} on GitHub`}
               >
-                <Icon icon="mdi:github" /> GitHub
+                <Icon icon="mdi:github" aria-hidden="true" /> GitHub
               </a>
             </div>
           </article>
