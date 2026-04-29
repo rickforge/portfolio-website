@@ -5,9 +5,8 @@ function Contact() {
     <section id="contact" className="contact">
       <h2>Contact</h2>
       <p>
-        I'm currently open to junior frontend opportunities, internships and
-        freelance web projects. Feel free to reach out if you'd like to work
-        together or learn more about me and my work.
+        I'm currently open to junior frontend and UI/UX opportunities. Feel free
+        to reach out if you'd like to collaborate or learn more about my work.
       </p>
 
       <div className="contact-links">
@@ -20,7 +19,11 @@ function Contact() {
           <Icon icon="mdi:email-outline" aria-hidden="true" />
           <span>Email</span>
         </a>
-        <a href="https://github.com/rickforge" className="contact-link" aria-label="Rickard's GitHub profile">
+        <a
+          href="https://github.com/rickforge"
+          className="contact-link"
+          aria-label="Rickard's GitHub profile"
+        >
           <Icon icon="mdi:github" aria-hidden="true" />
           <span>GitHub</span>
         </a>
